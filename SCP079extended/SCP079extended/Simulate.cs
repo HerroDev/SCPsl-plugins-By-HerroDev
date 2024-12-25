@@ -24,6 +24,11 @@ namespace SCP079extended
                 response = "SCP 079 only!";
                 return false;
             }
+            if(arguments.Count < 1)
+            {
+                response = "Need arguments! \n1.PB-1\n2.PB-2\n3.PB-3 ЛЗС\n4.PB-3 ТЗС\n5.PL-1\n6.PL-2\n7.PL-3\n8.PL-4\n9.PL-5\n10.PS-2 deactivated\n11.PS-4 deactivated\n12.PS-5 deactivated";
+                return false;
+            }
             int arg;
             if (!int.TryParse(arguments.At(0), out arg)) // попытка получить аргумент
             {
